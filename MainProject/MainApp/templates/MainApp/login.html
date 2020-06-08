@@ -1,0 +1,21 @@
+{% extends "MainApp/base.html" %}
+
+{% load crispy_forms_tags %}
+{% block head_title %}Login{% endblock %}
+{% block content %}
+
+
+
+<form action="" method="post">
+{% csrf_token %}
+
+
+{{form|crispy}}
+
+<input type="submit" value="Login" />
+
+</form>
+        <small class="text-muted">
+            <a class="ml-2" href="{% url 'register' %}"> Register </a>
+        </small>
+{% endblock %}
